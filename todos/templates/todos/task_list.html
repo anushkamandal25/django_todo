@@ -7,9 +7,9 @@
         <h3>Add your Tasks below:</h3>
     </div>
 
-{% comment %} 
+    
     {% if request.user.is_authenticated %}
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        {% comment %} <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="sweetalert2.all.min.js"></script>
         <script>
             var m = "{{ message }}"
@@ -21,6 +21,7 @@
                 timer: 3000;
                 })
         </script> {% endcomment %}
+
 
     <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-dark">Logout</button></a>
     {% else %}
